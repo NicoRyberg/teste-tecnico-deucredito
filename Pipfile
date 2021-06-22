@@ -6,9 +6,11 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = "*"
-flake8 = "*"
+pytest = "*"
 
 [dev-packages]
+requests = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.9"

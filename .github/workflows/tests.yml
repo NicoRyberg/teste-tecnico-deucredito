@@ -29,10 +29,11 @@ jobs:
 
     - name: Install dependencies
       if: steps.cache-pipenv.outputs.cache-hit != 'true'
-      run: pipenv install --deploy --dev
+      run: |
+        pipenv install --deploy --dev
     
     - name: Linter
-      run: flake8
+      run: pipenv run flake8
 
     - name: Run tests
-      run: python -m unittest discover -p 'test*.py'
+      run: pipenv run pytest

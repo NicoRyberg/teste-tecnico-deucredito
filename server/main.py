@@ -1,13 +1,16 @@
 from fastapi import FastAPI
 
+# local imports
+from server import config
+
+
 app = FastAPI()
-
-
-@app.route('/')
-async def index():
-    return 'index'
 
 
 @app.get('/')
 async def main():
-    return 'ok'
+    """Deployment health check"""
+    return {
+        'health_check': 'ok',
+        'version': config.SERVER_VERSION
+    }

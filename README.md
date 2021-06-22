@@ -15,7 +15,7 @@ Initialize your app in an VM using the Pipenv:
 
 Then run the following commands:
 
-- `uvicorn app.main:app --reload`
+- `uvicorn server.main:app --reload`
 
 And your app will be running on http://localhost:8000/
 
