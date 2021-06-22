@@ -4,7 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
+fastapi = "*"
+uvicorn = "*"
+flake8 = "*"
 
 [dev-packages]
 
