@@ -27,23 +27,33 @@ async def main():
 
 @app.get('/salesorders')
 async def get_salesorders():
-    filters = ['id','customerid','extended','discount','uom','subtransactions',
-    'transactionnumber','transactiondate','paymentterms',]
+    filters = [
+        'id', 'customerid', 'extended', 'discount', 'uom',
+        'subtransactions', 'transactionnumber',
+        'transactiondate', 'paymentterms'
+        ]
+
     salesorders_filter = [
-        {_filter: element[_filter] for _filter in filters    
-    }
-    for element in salesorders
+        {
+            _filter: element[_filter] for _filter in filters
+        }
+        for element in salesorders
     ]
     return {"salesorders": salesorders_filter}
 
 
 @app.get('/invoices')
 async def get_salesorder():
-    filters = ['quantity','customerid','extended','discount','purchasingunits',
-    'invoicedate','itemname','category',]
+    filters = [
+        'quantity', 'customerid', 'extended', 'discount',
+        'purchasingunits', 'invoicedate',
+        'itemname', 'category'
+        ]
+
     invoices_filter = [
-        {_filter: element[_filter] for _filter in filters    
-    }
-    for element in invoices
+        {
+            _filter: element[_filter] for _filter in filters
+        }
+        for element in invoices
     ]
-    return {"invoices": invoices_filter}    
+    return {"invoices": invoices_filter}
