@@ -17,9 +17,15 @@ Você deve mostrar dois gráficos na página mostrada quando o cliente acessar o
 - O primeiro gráfico deverá mostrar a informação **quantidade vendida / produto**: soma dos campo 'quantity' (invoices.json) para todos os 'product_ids' (invoices.json) iguais
   - **Desafio complementar (caso sobre tempo)**: mostrar o nome do produto ao invés do ID do produto.
 
+            - através do endpoint '/dashboard/produto' - ele exibe um JSON com a quantidade vendida de cada produto
+
 - O segundo gráfico deverá mostrar a informação **quantidade vendida / dia**: soma dos campo 'quantitiy' (invoices.json) de todos os produtos para cada dia (campo 'date' do invoices.json)
 
+        - através do endpoint '/dashboard/data' - ele exibe um JSON com a quantidade vendida por data
+
 - **Desafio complementar (caso sobre tempo)**: Mostar um terceiro gráfico com a informação **quantidade vendida / tipo de produto**: soma dos campos 'quantity' (invoices.json) para todos os 'type' (products.json) iguais.
+
+        - através do endpoint '/dashboard/tipo' - ele exibe um JSON com a quantidade vendida por tipo
 
 ## Setting up your development environment
 
